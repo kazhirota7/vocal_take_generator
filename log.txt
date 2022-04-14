@@ -1,0 +1,29 @@
+autoencoder = VAE(
+        input_shape=(256, 512, 1),
+        conv_filters=(512, 256, 128, 64, 32),
+        conv_kernels=(3, 3, 3, 3, 3),
+        conv_strides=(2, 2, 2, 2, (2, 1)),
+        latent_space_dim=128
+    )
+    autoencoder = VAE(
+        input_shape=(256, 512, 1),
+        conv_filters=(32,64,64,64,64),
+        conv_kernels=(3, 3, 3, 3, 3),
+        conv_strides=(1, 2, 2, 2,(2,1))
+        latent_space_dim=128
+    )
+    # conf3
+    autoencoder = VAE(
+        input_shape=(256, 512, 1),
+        conv_filters=(32,64,64,32),
+        conv_kernels=(3, 3, 3, 3),
+        conv_strides=(1, 2, 2, 1),
+        latent_space_dim=64
+    )
+
+
+# 450 epoch
+Epoch 300/450
+8/8 [==============================] - 0s 250us/sample - loss: 24432.0117 - _calculate_reconstruction_loss: 0.0237 - _calculate_kl_loss: 690.7355
+Epoch 450/450
+8/8 [==============================] - 0s 125us/sample - loss: 19238.9141 - _calculate_reconstruction_loss: 0.0183 - _calculate_kl_loss: 930.2046
